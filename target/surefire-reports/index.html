@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Suite" class="navigator-link">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
+                    <span>C:\Interview\ErnxConsumerApp\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Suite" class="navigator-link ">
+                    <span class="test-stats">3 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Suite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Suite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Suite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Suite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Suite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">31 methods, 6 failed,  1 skipped,  24 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SettingsPage.settingsTestCasesAndroid" class="method navigator-link" hash-for-method="changeParentName">changeParentName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SettingsPage.settingsTestCasesIphone" class="method navigator-link" hash-for-method="changeParentName">changeParentName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="gamePage.clickingBrushOrFlossAndroid" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SettingsPage.settingsTestCasesIphone" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="LoginPage.LoginTestConsumer" class="method navigator-link" hash-for-method="oldUserLoginAddChild">oldUserLoginAddChild</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsAndroid" class="method navigator-link" hash-for-method="testSendExtraPoints">testSendExtraPoints</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="gamePage.clickingBrushOrFlossAndroid" class="method navigator-link" hash-for-method="clickingOnActivities">clickingOnActivities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SettingsPage.settingsTestCases" class="method navigator-link" hash-for-method="changeParentName">changeParentName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigations" class="method navigator-link" hash-for-method="chooseReward">chooseReward</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsIphone" class="method navigator-link" hash-for-method="chooseReward">chooseReward</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="gamePage.clickingBrushOrFloss" class="method navigator-link" hash-for-method="clickingOnActivities">clickingOnActivities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="gamePage.clickingBrushOrFlossIphone" class="method navigator-link" hash-for-method="clickingOnActivities">clickingOnActivities</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigations" class="method navigator-link" hash-for-method="gameRules">gameRules</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsIphone" class="method navigator-link" hash-for-method="gameRules">gameRules</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigations" class="method navigator-link" hash-for-method="historyPage">historyPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsIphone" class="method navigator-link" hash-for-method="historyPage">historyPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SettingsPage.settingsTestCases" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="SettingsPage.settingsTestCasesAndroid" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="gamePage.clickingBrushOrFlossIphone" class="method navigator-link" hash-for-method="loginAndCreateChildIfNotExists">loginAndCreateChildIfNotExists</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="LoginPage.LoginTestConsumer" class="method navigator-link" hash-for-method="newLoginAddChild">newLoginAddChild</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="LoginPage.LoginTestConsumerAndroid" class="method navigator-link" hash-for-method="oldUserLoginAddChild">oldUserLoginAddChild</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="LoginPage.LoginTestConsumerIphone" class="method navigator-link" hash-for-method="oldUserLoginAddChild">oldUserLoginAddChild</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigations" class="method navigator-link" hash-for-method="settingsNavigations">settingsNavigations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsIphone" class="method navigator-link" hash-for-method="settingsNavigations">settingsNavigations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigations" class="method navigator-link" hash-for-method="storeNavigation">storeNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsIphone" class="method navigator-link" hash-for-method="storeNavigation">storeNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsAndroid" class="method navigator-link" hash-for-method="testChooseReward">testChooseReward</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsAndroid" class="method navigator-link" hash-for-method="testGameRules">testGameRules</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsAndroid" class="method navigator-link" hash-for-method="testHistoryPage">testHistoryPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsAndroid" class="method navigator-link" hash-for-method="testSettingsNavigation">testSettingsNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="homeTestCases.navigationsAndroid" class="method navigator-link" hash-for-method="testStoreNavigation">testStoreNavigation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">gamePage.clickingBrushOrFlossAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login Failed expected [true] but found [false]
+	at gamePage.clickingBrushOrFlossAndroid.login(clickingBrushOrFlossAndroid.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SettingsPage.settingsTestCasesIphone</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changeParentName">
+                  </a> <!-- changeParentName -->
+                  <span class="method-name">changeParentName</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1207:23)
+    at FrameDispatcher.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:248:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.typeImpl(FrameImpl.java:843)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$type$40(FrameImpl.java:833)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.type(FrameImpl.java:833)
+	at com.microsoft.playwright.impl.LocatorImpl.type(LocatorImpl.java:614)
+	at com.microsoft.playwright.Locator.type(Locator.java:5302)
+	at SettingsPage.settingsTestCasesIphone.login(settingsTestCasesIphone.java:53)
+	at SettingsPage.settingsTestCasesIphone.changeParentName(settingsTestCasesIphone.java:123)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1207:23)
+    at FrameDispatcher.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:248:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 43 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                  <div class="stack-trace">java.lang.AssertionError: Child name is wrong expected [true] but found [false]
+	at SettingsPage.settingsTestCasesIphone.login(settingsTestCasesIphone.java:109)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">LoginPage.LoginTestConsumer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="oldUserLoginAddChild">
+                  </a> <!-- oldUserLoginAddChild -->
+                  <span class="method-name">oldUserLoginAddChild</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1207:23)
+    at FrameDispatcher.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:248:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.typeImpl(FrameImpl.java:843)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$type$40(FrameImpl.java:833)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.type(FrameImpl.java:833)
+	at com.microsoft.playwright.impl.LocatorImpl.type(LocatorImpl.java:614)
+	at com.microsoft.playwright.Locator.type(Locator.java:5302)
+	at LoginPage.LoginTestConsumer.oldUserLoginAddChild(LoginTestConsumer.java:89)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1207:23)
+    at FrameDispatcher.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:248:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 42 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">homeTestCases.navigationsAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSendExtraPoints">
+                  </a> <!-- testSendExtraPoints -->
+                  <span class="method-name">testSendExtraPoints</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for locator(&quot;//button[normalize-space()=&apos;Give Extra Points&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
+	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:174)
+	at com.microsoft.playwright.Locator.click(Locator.java:2508)
+	at homeTestCases.navigationsAndroid.testSendExtraPoints(navigationsAndroid.java:178)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.click (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1022:23)
+    at FrameDispatcher.click (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:157:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for locator(&quot;//button[normalize-space()=&apos;Give Extra Points&apos;]&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 42 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">SettingsPage.settingsTestCasesAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changeParentName">
+                  </a> <!-- changeParentName -->
+                  <span class="method-name">changeParentName</span>
+                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1207:23)
+    at FrameDispatcher.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:248:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email&quot;)
+
+	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:132)
+	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
+	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:118)
+	at com.microsoft.playwright.impl.FrameImpl.typeImpl(FrameImpl.java:843)
+	at com.microsoft.playwright.impl.FrameImpl.lambda$type$40(FrameImpl.java:833)
+	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
+	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:97)
+	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
+	at com.microsoft.playwright.impl.FrameImpl.type(FrameImpl.java:833)
+	at com.microsoft.playwright.impl.LocatorImpl.type(LocatorImpl.java:614)
+	at com.microsoft.playwright.Locator.type(Locator.java:5302)
+	at SettingsPage.settingsTestCasesAndroid.login(settingsTestCasesAndroid.java:39)
+	at SettingsPage.settingsTestCasesAndroid.changeParentName(settingsTestCasesAndroid.java:76)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+Caused by: com.microsoft.playwright.TimeoutError: Error {
+  message=&apos;Timeout 30000ms exceeded.
+  name=&apos;TimeoutError
+  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\progress.js:75:26)
+    at Frame.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\frames.js:1207:23)
+    at FrameDispatcher.type (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\frameDispatcher.js:248:30)
+    at FrameDispatcher._handleCommand (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:96:40)
+    at DispatcherConnection.dispatch (C:\Users\gauta\AppData\Local\Temp\playwright-java-189160567917063070\package\lib\server\dispatchers\dispatcher.js:366:39)
+}
+Call log:
+-   - waiting for getByPlaceholder(&quot;Email&quot;)
+
+	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
+	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
+	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:130)
+	... 43 more
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">gamePage.clickingBrushOrFlossAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickingOnActivities">
+                  </a> <!-- clickingOnActivities -->
+                  <span class="method-name">clickingOnActivities</span>
+                  <div class="stack-trace">java.lang.Throwable: Method gamePage.clickingBrushOrFlossAndroid.clickingOnActivities() on instance gamePage.clickingBrushOrFlossAndroid@131774fe depends on not successfully finished methods 
+[gamePage.clickingBrushOrFlossAndroid.login() on instance gamePage.clickingBrushOrFlossAndroid@131774fe]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">gamePage.clickingBrushOrFlossIphone</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickingOnActivities">
+                  </a> <!-- clickingOnActivities -->
+                  <span class="method-name">clickingOnActivities</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginAndCreateChildIfNotExists">
+                  </a> <!-- loginAndCreateChildIfNotExists -->
+                  <span class="method-name">loginAndCreateChildIfNotExists</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">homeTestCases.navigationsIphone</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="chooseReward">
+                  </a> <!-- chooseReward -->
+                  <span class="method-name">chooseReward</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gameRules">
+                  </a> <!-- gameRules -->
+                  <span class="method-name">gameRules</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="historyPage">
+                  </a> <!-- historyPage -->
+                  <span class="method-name">historyPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="settingsNavigations">
+                  </a> <!-- settingsNavigations -->
+                  <span class="method-name">settingsNavigations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="storeNavigation">
+                  </a> <!-- storeNavigation -->
+                  <span class="method-name">storeNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">homeTestCases.navigations</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="chooseReward">
+                  </a> <!-- chooseReward -->
+                  <span class="method-name">chooseReward</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gameRules">
+                  </a> <!-- gameRules -->
+                  <span class="method-name">gameRules</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="historyPage">
+                  </a> <!-- historyPage -->
+                  <span class="method-name">historyPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="settingsNavigations">
+                  </a> <!-- settingsNavigations -->
+                  <span class="method-name">settingsNavigations</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="storeNavigation">
+                  </a> <!-- storeNavigation -->
+                  <span class="method-name">storeNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">LoginPage.LoginTestConsumerAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="oldUserLoginAddChild">
+                  </a> <!-- oldUserLoginAddChild -->
+                  <span class="method-name">oldUserLoginAddChild</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">LoginPage.LoginTestConsumer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="newLoginAddChild">
+                  </a> <!-- newLoginAddChild -->
+                  <span class="method-name">newLoginAddChild</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">homeTestCases.navigationsAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testChooseReward">
+                  </a> <!-- testChooseReward -->
+                  <span class="method-name">testChooseReward</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testGameRules">
+                  </a> <!-- testGameRules -->
+                  <span class="method-name">testGameRules</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testHistoryPage">
+                  </a> <!-- testHistoryPage -->
+                  <span class="method-name">testHistoryPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testSettingsNavigation">
+                  </a> <!-- testSettingsNavigation -->
+                  <span class="method-name">testSettingsNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStoreNavigation">
+                  </a> <!-- testStoreNavigation -->
+                  <span class="method-name">testStoreNavigation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">LoginPage.LoginTestConsumerIphone</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="oldUserLoginAddChild">
+                  </a> <!-- oldUserLoginAddChild -->
+                  <span class="method-name">oldUserLoginAddChild</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SettingsPage.settingsTestCasesAndroid</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">SettingsPage.settingsTestCases</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="changeParentName">
+                  </a> <!-- changeParentName -->
+                  <span class="method-name">changeParentName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">gamePage.clickingBrushOrFloss</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="clickingOnActivities">
+                  </a> <!-- clickingOnActivities -->
+                  <span class="method-name">clickingOnActivities</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Interview\ErnxConsumerApp\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Desktop Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;homeTestCases.navigations&quot;/&gt;
+      &lt;class name=&quot;gamePage.clickingBrushOrFloss&quot;/&gt;
+      &lt;class name=&quot;LoginPage.LoginTestConsumer&quot;/&gt;
+      &lt;class name=&quot;SettingsPage.settingsTestCases&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Desktop Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Android Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;homeTestCases.navigationsAndroid&quot;/&gt;
+      &lt;class name=&quot;gamePage.clickingBrushOrFlossAndroid&quot;/&gt;
+      &lt;class name=&quot;LoginPage.LoginTestConsumerAndroid&quot;/&gt;
+      &lt;class name=&quot;SettingsPage.settingsTestCasesAndroid&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Android Tests --&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;iPhone Tests&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;homeTestCases.navigationsIphone&quot;/&gt;
+      &lt;class name=&quot;gamePage.clickingBrushOrFlossIphone&quot;/&gt;
+      &lt;class name=&quot;LoginPage.LoginTestConsumerIphone&quot;/&gt;
+      &lt;class name=&quot;SettingsPage.settingsTestCasesIphone&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- iPhone Tests --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Desktop Tests (4 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">Android Tests (4 classes)</span>
+              </li>
+              <li>
+                <span class="test-name">iPhone Tests (4 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(31);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'oldUserLoginAddChild')
+data.setCell(0, 2, 'LoginPage.LoginTestConsumer')
+data.setCell(0, 3, 30348);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'changeParentName')
+data.setCell(1, 2, 'SettingsPage.settingsTestCasesIphone')
+data.setCell(1, 3, 30321);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'changeParentName')
+data.setCell(2, 2, 'SettingsPage.settingsTestCasesAndroid')
+data.setCell(2, 3, 30278);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testSendExtraPoints')
+data.setCell(3, 2, 'homeTestCases.navigationsAndroid')
+data.setCell(3, 3, 30027);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'chooseReward')
+data.setCell(4, 2, 'homeTestCases.navigations')
+data.setCell(4, 3, 25682);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testChooseReward')
+data.setCell(5, 2, 'homeTestCases.navigationsAndroid')
+data.setCell(5, 3, 24621);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'oldUserLoginAddChild')
+data.setCell(6, 2, 'LoginPage.LoginTestConsumerAndroid')
+data.setCell(6, 3, 24260);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'oldUserLoginAddChild')
+data.setCell(7, 2, 'LoginPage.LoginTestConsumerIphone')
+data.setCell(7, 3, 23913);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'login')
+data.setCell(8, 2, 'SettingsPage.settingsTestCasesIphone')
+data.setCell(8, 3, 23800);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'chooseReward')
+data.setCell(9, 2, 'homeTestCases.navigationsIphone')
+data.setCell(9, 3, 20505);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'login')
+data.setCell(10, 2, 'gamePage.clickingBrushOrFlossAndroid')
+data.setCell(10, 3, 19611);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'loginAndCreateChildIfNotExists')
+data.setCell(11, 2, 'gamePage.clickingBrushOrFlossIphone')
+data.setCell(11, 3, 19371);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'login')
+data.setCell(12, 2, 'SettingsPage.settingsTestCases')
+data.setCell(12, 3, 15204);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'newLoginAddChild')
+data.setCell(13, 2, 'LoginPage.LoginTestConsumer')
+data.setCell(13, 3, 14232);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'login')
+data.setCell(14, 2, 'SettingsPage.settingsTestCasesAndroid')
+data.setCell(14, 3, 14029);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'clickingOnActivities')
+data.setCell(15, 2, 'gamePage.clickingBrushOrFlossIphone')
+data.setCell(15, 3, 7630);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'clickingOnActivities')
+data.setCell(16, 2, 'gamePage.clickingBrushOrFloss')
+data.setCell(16, 3, 7098);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'storeNavigation')
+data.setCell(17, 2, 'homeTestCases.navigations')
+data.setCell(17, 3, 5111);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'testStoreNavigation')
+data.setCell(18, 2, 'homeTestCases.navigationsAndroid')
+data.setCell(18, 3, 5109);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'storeNavigation')
+data.setCell(19, 2, 'homeTestCases.navigationsIphone')
+data.setCell(19, 3, 5104);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testHistoryPage')
+data.setCell(20, 2, 'homeTestCases.navigationsAndroid')
+data.setCell(20, 3, 2473);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'historyPage')
+data.setCell(21, 2, 'homeTestCases.navigations')
+data.setCell(21, 3, 2395);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'historyPage')
+data.setCell(22, 2, 'homeTestCases.navigationsIphone')
+data.setCell(22, 3, 2277);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'settingsNavigations')
+data.setCell(23, 2, 'homeTestCases.navigationsIphone')
+data.setCell(23, 3, 804);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'testGameRules')
+data.setCell(24, 2, 'homeTestCases.navigationsAndroid')
+data.setCell(24, 3, 467);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'gameRules')
+data.setCell(25, 2, 'homeTestCases.navigationsIphone')
+data.setCell(25, 3, 421);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'gameRules')
+data.setCell(26, 2, 'homeTestCases.navigations')
+data.setCell(26, 3, 419);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'changeParentName')
+data.setCell(27, 2, 'SettingsPage.settingsTestCases')
+data.setCell(27, 3, 253);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'testSettingsNavigation')
+data.setCell(28, 2, 'homeTestCases.navigationsAndroid')
+data.setCell(28, 3, 230);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'settingsNavigations')
+data.setCell(29, 2, 'homeTestCases.navigations')
+data.setCell(29, 3, 227);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'clickingOnActivities')
+data.setCell(30, 2, 'gamePage.clickingBrushOrFlossAndroid')
+data.setCell(30, 3, 1);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 6 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">homeTestCases.navigations</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">chooseReward</span>
+                <span class="method-start">909 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gameRules</span>
+                <span class="method-start">26594 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">historyPage</span>
+                <span class="method-start">27015 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">settingsNavigations</span>
+                <span class="method-start">29411 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">storeNavigation</span>
+                <span class="method-start">29639 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">34750 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">gamePage.clickingBrushOrFloss</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">35151 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">clickingOnActivities</span>
+                <span class="method-start">60645 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">67744 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">LoginPage.LoginTestConsumer</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">68144 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">newLoginAddChild</span>
+                <span class="method-start">69155 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">oldUserLoginAddChild</span>
+                <span class="method-start">83388 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">113738 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SettingsPage.settingsTestCases</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">113970 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">114793 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">changeParentName</span>
+                <span class="method-start">129998 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">130251 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">homeTestCases.navigationsAndroid</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">130548 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">testChooseReward</span>
+                <span class="method-start">131295 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testGameRules</span>
+                <span class="method-start">155917 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testHistoryPage</span>
+                <span class="method-start">156385 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testSendExtraPoints</span>
+                <span class="method-start">158858 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testSettingsNavigation</span>
+                <span class="method-start">188885 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testStoreNavigation</span>
+                <span class="method-start">189116 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">194226 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">gamePage.clickingBrushOrFlossAndroid</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">194569 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">login</span>
+                <span class="method-start">195392 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">215005 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">LoginPage.LoginTestConsumerAndroid</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">215269 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">oldUserLoginAddChild</span>
+                <span class="method-start">215270 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">239531 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SettingsPage.settingsTestCasesAndroid</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">239793 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">240559 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">changeParentName</span>
+                <span class="method-start">254589 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">284868 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">homeTestCases.navigationsIphone</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">285150 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">chooseReward</span>
+                <span class="method-start">285880 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gameRules</span>
+                <span class="method-start">306386 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">historyPage</span>
+                <span class="method-start">306807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">storeNavigation</span>
+                <span class="method-start">309084 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">settingsNavigations</span>
+                <span class="method-start">314188 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">314992 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">gamePage.clickingBrushOrFlossIphone</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">315348 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">loginAndCreateChildIfNotExists</span>
+                <span class="method-start">316109 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">clickingOnActivities</span>
+                <span class="method-start">335481 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">343112 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">LoginPage.LoginTestConsumerIphone</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setup</span>
+                <span class="method-start">343406 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">oldUserLoginAddChild</span>
+                <span class="method-start">343407 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">367321 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">SettingsPage.settingsTestCasesIphone</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">367597 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">login</span>
+                <span class="method-start">367598 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">changeParentName</span>
+                <span class="method-start">391399 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">421721 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

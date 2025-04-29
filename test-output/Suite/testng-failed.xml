@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Desktop Tests(failed)">
+    <classes>
+      <class name="LoginPage.LoginTestConsumer">
+        <methods>
+          <include name="oldUserLoginAddChild"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- LoginPage.LoginTestConsumer -->
+    </classes>
+  </test> <!-- Desktop Tests(failed) -->
+  <test thread-count="5" name="Android Tests(failed)">
+    <classes>
+      <class name="homeTestCases.navigationsAndroid">
+        <methods>
+          <include name="testSettingsNavigation"/>
+          <include name="setUp"/>
+          <include name="testStoreNavigation"/>
+          <include name="testChooseReward"/>
+          <include name="testHistoryPage"/>
+          <include name="testSendExtraPoints"/>
+          <include name="tearDown"/>
+          <include name="testGameRules"/>
+        </methods>
+      </class> <!-- homeTestCases.navigationsAndroid -->
+      <class name="gamePage.clickingBrushOrFlossAndroid">
+        <methods>
+          <include name="tearDown"/>
+          <include name="clickingOnActivities"/>
+          <include name="setUp"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- gamePage.clickingBrushOrFlossAndroid -->
+      <class name="SettingsPage.settingsTestCasesAndroid">
+        <methods>
+          <include name="setUp"/>
+          <include name="changeParentName"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- SettingsPage.settingsTestCasesAndroid -->
+      <class name="LoginPage.LoginTestConsumerAndroid">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="oldUserLoginAddChild"/>
+          <include name="newLoginAddChild"/>
+        </methods>
+      </class> <!-- LoginPage.LoginTestConsumerAndroid -->
+    </classes>
+  </test> <!-- Android Tests(failed) -->
+  <test thread-count="5" name="iPhone Tests(failed)">
+    <classes>
+      <class name="SettingsPage.settingsTestCasesIphone">
+        <methods>
+          <include name="setUp"/>
+          <include name="changeParentName"/>
+          <include name="tearDown"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- SettingsPage.settingsTestCasesIphone -->
+      <class name="LoginPage.LoginTestConsumerIphone">
+        <methods>
+          <include name="newLoginAddChild"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="oldUserLoginAddChild"/>
+        </methods>
+      </class> <!-- LoginPage.LoginTestConsumerIphone -->
+      <class name="homeTestCases.navigationsIphone">
+        <methods>
+          <include name="settingsNavigations"/>
+          <include name="chooseReward"/>
+          <include name="gameRules"/>
+          <include name="storeNavigation"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="historyPage"/>
+        </methods>
+      </class> <!-- homeTestCases.navigationsIphone -->
+      <class name="gamePage.clickingBrushOrFlossIphone">
+        <methods>
+          <include name="loginAndCreateChildIfNotExists"/>
+          <include name="clickingOnActivities"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- gamePage.clickingBrushOrFlossIphone -->
+    </classes>
+  </test> <!-- iPhone Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->
