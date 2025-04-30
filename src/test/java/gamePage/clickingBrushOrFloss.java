@@ -28,7 +28,7 @@ public class clickingBrushOrFloss {
 	@BeforeClass
 	public void setup() throws InterruptedException {
 		playwright = Playwright.create();
-		browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
+		browser = playwright.chromium().launch(new LaunchOptions().setHeadless(true));
 		page = browser.newPage();
 		login();
 	}

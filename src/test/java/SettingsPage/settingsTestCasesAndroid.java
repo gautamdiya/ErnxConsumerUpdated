@@ -20,7 +20,7 @@ public class settingsTestCasesAndroid {
     @BeforeClass
     public void setUp() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(393, 851) // Pixel 5 viewport size
                 .setUserAgent(
@@ -53,7 +53,6 @@ public class settingsTestCasesAndroid {
 
     @Test(priority = 2)
     public void changeParentName() throws InterruptedException {
-        login();
         logger.info("Starting changeParentName Test Case!!!");
         Locator settingsTab = page.locator("//span[normalize-space()='Settings']");
         settingsTab.click();

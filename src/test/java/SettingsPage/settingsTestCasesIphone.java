@@ -27,7 +27,7 @@ public class settingsTestCasesIphone {
 
     static {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(390, 844) // iPhone 13 dimensions
                 .setUserAgent(
@@ -76,7 +76,6 @@ public class settingsTestCasesIphone {
 
     @Test(priority = 2)
     public void changeParentName() throws InterruptedException {
-        login();
         logger.info("Starting changeParentName Test Case!!!");
         Locator settingsTab = page.locator("//span[normalize-space()='Settings']");
         settingsTab.click();

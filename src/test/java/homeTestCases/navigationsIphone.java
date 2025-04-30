@@ -23,7 +23,7 @@ public class navigationsIphone {
     @BeforeClass
     public void setUp() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(390, 844)
                 .setUserAgent(
