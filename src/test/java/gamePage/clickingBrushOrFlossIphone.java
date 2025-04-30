@@ -5,6 +5,8 @@ import com.microsoft.playwright.options.WaitForSelectorState;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import static org.testng.Assert.assertTrue;
+
 import java.util.logging.Logger;
 
 import LoginPage.EmailUtils;
@@ -34,56 +36,61 @@ public class clickingBrushOrFlossIphone{
     @Test(priority = 1)
     public void loginAndCreateChildIfNotExists() throws InterruptedException {
         logger.info("Starting browser and Test Case");
-        page.navigate("https://ernx-consumer.vercel.app/login");
-        logger.info("Login Page Opened");
-
-        page.getByPlaceholder("Email").type("automationtesttimechains@gmail.com");
-        page.locator("//button[contains(text(),'Next')]").click();
-
-        Thread.sleep(5000);
-        logger.info("Getting Otp and filling");
-
-        String emailContent = EmailUtils.getOtpFromEmail(
-                "imap.gmail.com",
-                "993",
-                "automationtesttimechains@gmail.com",
-                "pjkw iaiz qner ptvh",
-                "Signup OTP",
-                60
-        );
-
-        page.locator("[id=otp-0]").type(emailContent);
-        Thread.sleep(3000);
-        logger.info("Otp is Verified");
-
-        page.locator("//span[normalize-space()='Settings']").click();
-        page.locator("//button[normalize-space()='Children Details']").click();
-
-        Locator addFirstChildBtn = page.locator("//button[normalize-space()='Add Your First Child']");
-        Locator addChildIcon = page.locator("path[d='M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z']");
-
-        if (addFirstChildBtn.isVisible()) {
-            addFirstChildBtn.click();
-        } else {
-            addChildIcon.click();
-        }
-
-        page.getByPlaceholder("First Name or Nickname").type(childName);
-        page.locator("//span[contains(text(),'female')]").click();
-        page.locator("//button[contains(text(),'Next')]").click();
-        page.locator("//button[contains(text(),'Next')]").click();
-        page.locator("//p[contains(text(),'ERNX Dev test')]").click();
-        page.locator("//button[contains(text(),'Next')]").click();
-        page.locator("//button[contains(text(),'Finish')]").click();
-
-        Thread.sleep(5000);
-        String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
-        String currentUrl = page.url();
-
-        Assert.assertTrue(currentUrl.contains("https://ernx-consumer.vercel.app/game"), "Login Failed");
-        Assert.assertTrue(childCreatedName.contains(childName), "Child name is incorrect");
-
-        logger.info("Login and child creation successful");
+		page.navigate("https://ernx-consumer.vercel.app/login");
+		logger.info("Login Page Opened");
+		page.getByPlaceholder("Email").type("automationtesttimechains@gmail.com");
+		page.locator("//button[contains(text(),'Next')]").click();
+		Thread.sleep(5000);
+		logger.info("Getting Otp and filling");
+		String emailContent = EmailUtils.getOtpFromEmail(
+				"imap.gmail.com", // host
+				"993", // port
+				"automationtesttimechains@gmail.com", // username
+				"pjkw iaiz qner ptvh", // password
+				"Signup OTP", // subject
+				60 // timeout in seconds
+		);
+		Locator otpfield = page.locator("[id=otp-0]");
+		otpfield.type(emailContent);
+		Thread.sleep(3000);
+		logger.info("Otp is Veified");
+		page.locator("//span[normalize-space()='Settings']").click();
+		page.locator("//button[normalize-space()='Children Details']").click();
+		Locator addYourFistChildBttn = page.locator("//button[normalize-space()='Add Your First Child']");
+		Locator addChildIcon = page.locator("path[d='M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z']");
+		if (addYourFistChildBttn.isVisible()) {
+			addYourFistChildBttn.click();
+			page.getByPlaceholder("First Name or Nickname").type(childName);
+			page.locator("//span[contains(text(),'female')]").click();
+			page.locator("//button[contains(text(),'Next')]").click();
+			page.locator("//button[contains(text(),'Next')]").click();
+			page.locator("//p[contains(text(),'ERNX Dev test')]").click();
+			page.locator("//button[contains(text(),'Next')]").click();
+			page.locator("//button[contains(text(),'Finish')]").click();
+			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
+			Thread.sleep(5000);
+			logger.info("Verifying the Name of child and URL is correct");
+			String currentUrl = page.url();
+			assertTrue(currentUrl.contains("https://ernx-consumer.vercel.app/game"), "Login Failed");
+			assertTrue(childCreatedName.equals(childName), "Child name is wrong");
+			logger.info("Login Success!!!!");
+		} else {
+			addChildIcon.click();
+			page.getByPlaceholder("First Name or Nickname").type(childName);
+			page.locator("//span[contains(text(),'female')]").click();
+			page.locator("//button[contains(text(),'Next')]").click();
+			page.locator("//button[contains(text(),'Next')]").click();
+			page.locator("//p[contains(text(),'ERNX Dev test')]").click();
+			page.locator("//button[contains(text(),'Next')]").click();
+			page.locator("//button[contains(text(),'Finish')]").click();
+			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
+			Thread.sleep(5000);
+			logger.info("Verifying the Name of child and URL is correct");
+			String currentUrl = page.url();
+			assertTrue(currentUrl.contains("https://ernx-consumer.vercel.app/game"), "Login Failed");
+			assertTrue(childCreatedName.contains(childName), "Child name is wrong");
+			logger.info("Login Success!!!!");
+		}
     }
 
     @Test(priority = 2, dependsOnMethods = "loginAndCreateChildIfNotExists")
