@@ -53,7 +53,6 @@ public class settingsTestCasesAndroid {
 
     @Test(priority = 2)
     public void changeParentName() throws InterruptedException {
-        login();
         logger.info("Starting changeParentName Test Case!!!");
         Locator settingsTab = page.locator("//span[normalize-space()='Settings']");
         settingsTab.click();
