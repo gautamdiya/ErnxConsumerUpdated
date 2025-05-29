@@ -21,9 +21,9 @@ public class clickingBrushOrFlossIphone{
     private static final Logger logger = Logger.getLogger(clickingBrushOrFlossIphone.class.getName());
 
     @BeforeClass
-    public void setup() {
+    public void setup() throws InterruptedException {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(390, 844) // iPhone 13 dimensions
                 .setUserAgent("Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1")
@@ -31,11 +31,11 @@ public class clickingBrushOrFlossIphone{
                 .setIsMobile(true)
                 .setHasTouch(true));
         page = context.newPage();
+        login();
     }
 
-    @Test(priority = 1)
-    public void loginAndCreateChildIfNotExists() throws InterruptedException {
-        logger.info("Starting browser and Test Case");
+    public static void login() throws InterruptedException {
+		logger.info("Starting browser and Test Case");
 		page.navigate("https://ernx-consumer.vercel.app/login");
 		logger.info("Login Page Opened");
 		page.getByPlaceholder("Email").type("automationtesttimechains@gmail.com");
@@ -67,7 +67,7 @@ public class clickingBrushOrFlossIphone{
 			page.locator("//p[contains(text(),'ERNX Dev test')]").click();
 			page.locator("//button[contains(text(),'Next')]").click();
 			page.locator("//button[contains(text(),'Finish')]").click();
-			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
+			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()]").textContent();
 			Thread.sleep(5000);
 			logger.info("Verifying the Name of child and URL is correct");
 			String currentUrl = page.url();
@@ -83,7 +83,7 @@ public class clickingBrushOrFlossIphone{
 			page.locator("//p[contains(text(),'ERNX Dev test')]").click();
 			page.locator("//button[contains(text(),'Next')]").click();
 			page.locator("//button[contains(text(),'Finish')]").click();
-			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
+			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()]").textContent();
 			Thread.sleep(5000);
 			logger.info("Verifying the Name of child and URL is correct");
 			String currentUrl = page.url();
@@ -91,73 +91,76 @@ public class clickingBrushOrFlossIphone{
 			assertTrue(childCreatedName.contains(childName), "Child name is wrong");
 			logger.info("Login Success!!!!");
 		}
-    }
+	}
 
-    @Test(priority = 2, dependsOnMethods = "loginAndCreateChildIfNotExists")
-    public void clickingOnActivities() throws InterruptedException {
-        logger.info("Clicking on activities");
+	@Test
+	public void clickingOnActivities() throws InterruptedException {
+		logger.info("Clicking on activities");
+		Locator switchToNewAddedChild = page.locator("(//button[contains(@class,'embla__dot')])[last()]");
+		switchToNewAddedChild.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
+		switchToNewAddedChild.click();
+		Locator progressBar = page.locator("(//div[@role='progressbar'])[last()]");
+		Locator activity1BrushIcon = page.locator("(//img[@alt='Practice 1'])[1]");
+		Locator activity2FlossIcon = page.locator("(//img[@alt='Practice 2'])[1]");
+		Locator addActivityIcon = page.locator("path[d='M1.19951 18C1.19951 8.72162 8.72113 1.2 17.9995 1.2C27.2779 1.2 34.7995 8.72162 34.7995 18C34.7995 27.2784 27.2779 34.8 17.9995 34.8C8.72113 34.8 1.19951 27.2784 1.19951 18Z']");
+		Locator activity3 = page.locator("//img[@alt='sleep']");
+		Locator activity3Icon = page.locator("//img[@alt='Chore']");
+		Locator yesBtn = page.locator("//button[normalize-space()='Yes']");
+		Locator bottomText = page.locator("//p[@class='text-sm']");
+		Locator counter = page.locator("(//span[contains(@style,'font-weight: bold') and contains(@style,'color: rgb')])[last()]");
 
-        Locator switchChildBtn = page.locator("(//button[contains(@class,'embla__dot')])[last()]");
-        switchChildBtn.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
-        switchChildBtn.click();
+		// Activity 1
+		Thread.sleep(5000);
+		logger.info("Clicking on activity 1");
+		String counterBefore1 = counter.textContent();
+		String progressValue1 = progressBar.getAttribute("aria-valuetext");
+		System.out.println(progressValue1);
+		activity1BrushIcon.click();
+		Thread.sleep(2000);
+		String counterAfter1 = counter.textContent();
+		String progressValue2 = progressBar.getAttribute("aria-valuetext");
+		System.out.println(progressValue2);
+		assertTrue(Integer.parseInt(progressValue1.replace("%", "").trim()) < Integer.parseInt(progressValue2.replace("%", "").trim()), "ProgressBar is not Updated!");
+		assertTrue(Integer.parseInt(counterBefore1.replace("%", "").trim()) < Integer.parseInt(counterAfter1.replace("%", "").trim()), "Counter is not Updated!");
+		logger.info("Activity 1 completed");
 
-        Locator progressBar = page.locator("(//span[contains(@style, 'color: rgb(255, 255, 255)') ])[last()]");
-        Locator counter = page.locator("(//span[contains(@style,'font-weight: bold') and contains(@style,'color: rgb')])[last()]");
+		// Activity 2
+		logger.info("Clicking on activity 2");
+		String barBefore2 = progressBar.textContent();
+		String counterBefore2 = counter.textContent();
+		activity2FlossIcon.click();
+		Thread.sleep(2000);
+		String barAfter2 = progressBar.textContent();
+		String counterAfter2 = counter.textContent();
+		assertTrue(Integer.parseInt(barBefore2.replace("%", "").trim()) < Integer.parseInt(barAfter2.replace("%", "").trim()), "ProgressBar is not Updated!");
+		assertTrue(Integer.parseInt(counterBefore2.replace("%", "").trim()) < Integer.parseInt(counterAfter2.replace("%", "").trim()), "Counter is not Updated!");
+		logger.info("Activity 2 completed");
 
-        Locator brushIcon = page.locator("(//img[@alt='Practice 1'])[1]");
-        Locator flossIcon = page.locator("(//img[@alt='Practice 2'])[1]");
-        Locator addActivityIcon = page.locator("path[d='M1.19951 18C1.19951 8.72162 8.72113 1.2 17.9995 1.2C27.2779 1.2 34.7995 8.72162 34.7995 18C34.7995 27.2784 27.2779 34.8 17.9995 34.8C8.72113 34.8 1.19951 27.2784 1.19951 18Z']");
-        Locator sleepActivity = page.locator("//img[@alt='sleep']");
-        Locator sleepIcon = page.locator("//img[@alt='Chore']");
-        Locator streakIcon = page.locator("path[stroke='#FFA622']");
+		// Activity 3
+		logger.info("Adding activity 3");
+		addActivityIcon.click();
+		activity3.click();
+		page.locator("//button[contains(text(),'Apply')]").click();
+		logger.info("Clicking on activity 3");
+		String barBefore3 = progressBar.textContent();
+		String counterBefore3 = counter.textContent();
+		activity3Icon.click();
+		Thread.sleep(2000);
+		String barAfter3 = progressBar.textContent();
+		String counterAfter3 = counter.textContent();
+		assertTrue(Integer.parseInt(barBefore3.replace("%", "").trim()) < Integer.parseInt(barAfter3.replace("%", "").trim()), "ProgressBar is not Updated!");
+		assertTrue(Integer.parseInt(counterBefore3.replace("%", "").trim()) < Integer.parseInt(counterAfter3.replace("%", "").trim()), "Counter is not Updated!");
 
-        // Activity 1: Brush
-        logger.info("Clicking on activity 1");
-        String before1 = progressBar.textContent();
-        String counter1 = counter.textContent();
-        brushIcon.click();
-        Thread.sleep(2000);
-        String after1 = progressBar.textContent();
-        String counterAfter1 = counter.textContent();
-        Assert.assertTrue(Integer.parseInt(before1.replace("%", "").trim()) < Integer.parseInt(after1.replace("%", "").trim()), "Progress bar not updated");
-        Assert.assertTrue(Integer.parseInt(counter1.replace("%", "").trim()) < Integer.parseInt(counterAfter1.replace("%", "").trim()), "Counter not updated");
+		if (bottomText.textContent().contains("You completed 3 activities today and moved forward to space 1!")) {
+			System.out.println("text changed....After clicking on 3 Activities");
+		}
+		logger.info("Activity 3 completed");
+	}
 
-        // Activity 2: Floss
-        logger.info("Clicking on activity 2");
-        String before2 = progressBar.textContent();
-        String counter2 = counter.textContent();
-        flossIcon.click();
-        Thread.sleep(2000);
-        String after2 = progressBar.textContent();
-        String counterAfter2 = counter.textContent();
-        Assert.assertTrue(Integer.parseInt(before2.replace("%", "").trim()) < Integer.parseInt(after2.replace("%", "").trim()), "Progress bar not updated");
-        Assert.assertTrue(Integer.parseInt(counter2.replace("%", "").trim()) < Integer.parseInt(counterAfter2.replace("%", "").trim()), "Counter not updated");
-
-        // Activity 3: Sleep
-        logger.info("Adding and clicking on activity 3");
-        addActivityIcon.click();
-        sleepActivity.click();
-        page.locator("//button[contains(text(),'Apply')]").click();
-        Thread.sleep(1000);
-
-        String before3 = progressBar.textContent();
-        String counter3 = counter.textContent();
-        sleepIcon.click();
-        Thread.sleep(2000);
-        String after3 = progressBar.textContent();
-        String counterAfter3 = counter.textContent();
-        Assert.assertTrue(Integer.parseInt(before3.replace("%", "").trim()) < Integer.parseInt(after3.replace("%", "").trim()), "Progress bar not updated");
-        Assert.assertTrue(Integer.parseInt(counter3.replace("%", "").trim()) < Integer.parseInt(counterAfter3.replace("%", "").trim()), "Counter not updated");
-
-        if (streakIcon.isVisible()) {
-            logger.info("Streak created for the day after 3 activities.");
-        }
-    }
-
-    @AfterClass
-    public void tearDown() {
-        if (page != null) page.close();
-        if (browser != null) browser.close();
-        if (playwright != null) playwright.close();
-    }
+	@AfterClass
+	public void tearDown() {
+		page.close();
+		browser.close();
+		playwright.close();
+	}
 }

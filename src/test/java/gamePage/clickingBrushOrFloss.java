@@ -1,5 +1,4 @@
 package gamePage;
-
 import static org.testng.Assert.assertTrue;
 
 import java.util.logging.Logger;
@@ -28,7 +27,7 @@ public class clickingBrushOrFloss {
 	@BeforeClass
 	public void setup() throws InterruptedException {
 		playwright = Playwright.create();
-		browser = playwright.chromium().launch(new LaunchOptions().setHeadless(true));
+		browser = playwright.chromium().launch(new LaunchOptions().setHeadless(false));
 		page = browser.newPage();
 		login();
 	}
@@ -66,7 +65,7 @@ public class clickingBrushOrFloss {
 			page.locator("//p[contains(text(),'ERNX Dev test')]").click();
 			page.locator("//button[contains(text(),'Next')]").click();
 			page.locator("//button[contains(text(),'Finish')]").click();
-			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
+			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()]").textContent();
 			Thread.sleep(5000);
 			logger.info("Verifying the Name of child and URL is correct");
 			String currentUrl = page.url();
@@ -82,7 +81,7 @@ public class clickingBrushOrFloss {
 			page.locator("//p[contains(text(),'ERNX Dev test')]").click();
 			page.locator("//button[contains(text(),'Next')]").click();
 			page.locator("//button[contains(text(),'Finish')]").click();
-			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()-1]").textContent();
+			String childCreatedName = page.locator("(//h1[@class='pfont-700 text-lg'])[last()]").textContent();
 			Thread.sleep(5000);
 			logger.info("Verifying the Name of child and URL is correct");
 			String currentUrl = page.url();
@@ -98,25 +97,28 @@ public class clickingBrushOrFloss {
 		Locator switchToNewAddedChild = page.locator("(//button[contains(@class,'embla__dot')])[last()]");
 		switchToNewAddedChild.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE));
 		switchToNewAddedChild.click();
-		Locator progressBar = page.locator("(//span[contains(@style, 'color: rgb(255, 255, 255)') ])[last()]");
+		Locator progressBar = page.locator("(//div[@role='progressbar'])[last()]");
 		Locator activity1BrushIcon = page.locator("(//img[@alt='Practice 1'])[1]");
 		Locator activity2FlossIcon = page.locator("(//img[@alt='Practice 2'])[1]");
 		Locator addActivityIcon = page.locator("path[d='M1.19951 18C1.19951 8.72162 8.72113 1.2 17.9995 1.2C27.2779 1.2 34.7995 8.72162 34.7995 18C34.7995 27.2784 27.2779 34.8 17.9995 34.8C8.72113 34.8 1.19951 27.2784 1.19951 18Z']");
 		Locator activity3 = page.locator("//img[@alt='sleep']");
 		Locator activity3Icon = page.locator("//img[@alt='Chore']");
 		Locator yesBtn = page.locator("//button[normalize-space()='Yes']");
-		Locator streakIcon = page.locator("path[stroke='#FFA622']");
+		Locator bottomText = page.locator("//p[@class='text-sm']");
 		Locator counter = page.locator("(//span[contains(@style,'font-weight: bold') and contains(@style,'color: rgb')])[last()]");
 
 		// Activity 1
+		Thread.sleep(5000);
 		logger.info("Clicking on activity 1");
 		String counterBefore1 = counter.textContent();
-		String barBefore1 = progressBar.textContent();
+		String progressValue1 = progressBar.getAttribute("aria-valuetext");
+		System.out.println(progressValue1);
 		activity1BrushIcon.click();
 		Thread.sleep(2000);
 		String counterAfter1 = counter.textContent();
-		String barAfter1 = progressBar.textContent();
-		assertTrue(Integer.parseInt(barBefore1.replace("%", "").trim()) < Integer.parseInt(barAfter1.replace("%", "").trim()), "ProgressBar is not Updated!");
+		String progressValue2 = progressBar.getAttribute("aria-valuetext");
+		System.out.println(progressValue2);
+		assertTrue(Integer.parseInt(progressValue1.replace("%", "").trim()) < Integer.parseInt(progressValue2.replace("%", "").trim()), "ProgressBar is not Updated!");
 		assertTrue(Integer.parseInt(counterBefore1.replace("%", "").trim()) < Integer.parseInt(counterAfter1.replace("%", "").trim()), "Counter is not Updated!");
 		logger.info("Activity 1 completed");
 
@@ -147,8 +149,8 @@ public class clickingBrushOrFloss {
 		assertTrue(Integer.parseInt(barBefore3.replace("%", "").trim()) < Integer.parseInt(barAfter3.replace("%", "").trim()), "ProgressBar is not Updated!");
 		assertTrue(Integer.parseInt(counterBefore3.replace("%", "").trim()) < Integer.parseInt(counterAfter3.replace("%", "").trim()), "Counter is not Updated!");
 
-		if (streakIcon.isVisible()) {
-			System.out.println("Streak is Created for the day....After clicking on 3 Activities");
+		if (bottomText.textContent().contains("You completed 3 activities today and moved forward to space 1!")) {
+			System.out.println("text changed....After clicking on 3 Activities");
 		}
 		logger.info("Activity 3 completed");
 	}
