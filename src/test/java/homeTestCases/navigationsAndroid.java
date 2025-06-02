@@ -48,7 +48,7 @@ public class navigationsAndroid {
     @BeforeClass
     public void setUp() {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(393, 851)
                 .setUserAgent(

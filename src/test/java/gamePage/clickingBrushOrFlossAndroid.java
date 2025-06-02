@@ -23,7 +23,7 @@ public class clickingBrushOrFlossAndroid {
     @BeforeClass
     public void setUp() throws InterruptedException {
         playwright = Playwright.create();
-        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+        browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(true));
         context = browser.newContext(new Browser.NewContextOptions()
                 .setViewportSize(393, 851)
                 .setUserAgent("Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Mobile Safari/537.36")
